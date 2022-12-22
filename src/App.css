@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1631631480669-535cc43f2327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    height: 600px;
+    width: 100%;
+}
+.card{
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    border: 1px solid white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px 20px 20px 30px;
+    box-shadow: 1px 2px;
+
+
+}
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@mixin bgColor() {
+  background-color: #a5a5a5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@mixin hvCenterAlign() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  @include bgColor();
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.neu-btn {
+  @include hvCenterAlign();
+  @include bgColor();
+  width: 200px;
+  height: 50px;
+  font-family: "Raleway";
+  font-size: large;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25),
+    -8px -8px 12px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.neu-btn:hover {
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25) inset,
+    -8px -8px 12px rgba(255, 255, 255, 0.3) inset;
 }
